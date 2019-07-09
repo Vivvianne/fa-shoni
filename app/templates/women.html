@@ -1,9 +1,23 @@
 {%extends 'base.html'%}
+{%block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+{% endblock %}
 {%block content%}
     <h1>Women Category</h1>
     <div class="row">
             <div class="col-md-4">
-                    <img src="../static/photos/women/image1.jpeg" alt="no image" style="height:70px;width: 70px;">
+                    <div class="flip-card" >
+                            <div class="flip-card-inner" >
+                              <div class="flip-card-front" >
+                                    <img src="../static/photos/women/image1.jpeg" alt="no image">
+                              </div>
+                              <div class="flip-card-back" >
+                                <h2>Paris</h2>
+                                <p>What an amazing city</p>
+                              </div>
+                            </div>
+                          </div>
                 </div>
                 <div class="col-md-4">
                         <img src="../static/photos/women/images2.jpeg" alt="no image">
