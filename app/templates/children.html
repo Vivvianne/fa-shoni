@@ -1,6 +1,11 @@
 {%extends 'base.html'%}
+{%block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+{% endblock %}
 {%block content%}
-    <h1>Children Category</h1>
+    <h1 style="font-family: 'Kaushan Script', cursive;">Children Category</h1>
     <div class="row">
             <div class="col-md-4">
                     <img src="../static/photos/children/image1.jpg" alt="no image" style="height:70px;width: 70px;">
