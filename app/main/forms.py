@@ -6,5 +6,5 @@ from ..models import User,Subscription
 
 
 class SubscriptionForm(FlaskForm):
-    email = StringField('Insert your email here', validators=[DataRequired()])
+    email = StringField('', validators=[DataRequired()])
     subscribe = SubmitField()
