@@ -3,7 +3,7 @@ class Config:
     The main configuration settings
     '''
     pass
-class ProConfig(Config):
+class ProdConfig(Config):
     '''
     Production child class for the configuration class
     Args:
@@ -16,8 +16,9 @@ class DevConfig(Config):
     Args:
     Config:THe configuration main class
     '''
-    DEBUG = True 
+    DEBUG = True
+     
 config_options = {
     'development':DevConfig,
-    'production':ProConfig
+    'production':ProdConfig
 }
