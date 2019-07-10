@@ -6,4 +6,4 @@ def index():
     '''
     View the home page
     '''
-    return render_template('women.html')
+    return render_template('men.html')
