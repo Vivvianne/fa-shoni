@@ -3,11 +3,13 @@ from flask import render_template, redirect, url_for, flash
 from ..models import User
 from flask_login import login_user, logout_user, login_required
 from .forms import LoginForm,RegistrationForm
+
 from .. import db
 
 @auth.route('/register', methods=["GET","POST"])
 def register():
     form = RegistrationForm()
+    
     if form.validate_on_submit():
        
         user = User(name=form.fullname.data, email=form.email.data, password=form.password.data)

@@ -1,0 +1,37 @@
+{% import 'bootstrap/wtf.html' as wtf%}
+<div class="footer">
+    <div class="Section5">
+        <div class="row">
+            <div class="col-md-5">
+                <div id="feedback">
+                    <form>
+                        <h4>Subscribe Now</h4>
+                        {{wtf.quick_form(SubscriptionForm)}}
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div id="">
+                    <h4>Contact Us</h4>
+                    <div id="reach-us">
+                        <hr id="line" />
+                        <p><i class="fa fa-phone"></i> Phone:(+254)712345678</p>
+                        <p><i class="fa fa-map-marker"></i> Location: Ngong Lane, Off Ngong Road</p>
+                        <p><i class="fa fa-envelope"></i> Email: fa-shoni@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4>Quick Links</h4>
+                <div id="page-links">
+                    <hr id="line" />
+                    <a href="/"><i class="fa fa-home"></i> home</a><br />
+
+                    <a href="{{url_for('auth.register')}}"><i class="fa fa-registered"></i> register</a><br />
+                    <a href="{{url_for('auth.login')}}"><i class="fa fa-sign-in"></i> sign in</a><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

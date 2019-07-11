@@ -91,10 +91,10 @@
             <h4>Quick Links</h4>
             <div id="page-links">
                 <hr id="line" />
-                <a href="#home"><i class="fa fa-home"></i> home</a><br />
-                <a href="#what-we-do"><i class="fa fa-calendar"></i> Services</a><br />
-                <a href="#register"><i class="fa fa-registered"></i> register</a><br />
-                <a href="#login"><i class="fa fa-sign-in"></i> login</a><br />
+                <a href="/"><i class="fa fa-home"></i> home</a><br />
+
+                <a href="{{url_for('auth.register')}}"><i class="fa fa-registered"></i> register</a><br />
+                <a href="{{url_for('auth.login')}}"><i class="fa fa-sign-in"></i> sign in</a><br />
             </div>
         </div>
     </div>
