@@ -1,7 +1,10 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fa-shoni</a>
+            <ul>
+                <li><a class="navbar-brand" href="/">Fa-shoni</a></li>
+                <li><a class="navbar-brand" href="{{url_for('main.profile' ,id = current_user.id)}}">profile</a></li>
+            </ul>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="{{url_for('auth.login')}}"><span class="glyphicon glyphicon-user"></span> Sign in</a></li>

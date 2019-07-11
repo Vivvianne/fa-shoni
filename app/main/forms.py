@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, SelectField, DateField
+from wtforms import StringField, SubmitField, TextAreaField, SelectField, DateField,PasswordField
 from wtforms.validators import DataRequired
+from wtforms.validators import Required,EqualTo
 from ..models import User,Subscription
 
 
@@ -8,3 +9,11 @@ from ..models import User,Subscription
 class SubscriptionForm(FlaskForm):
     email = StringField('Insert your email here', validators=[DataRequired()])
     subscribe = SubmitField()
+    
+class UpdateForm(FlaskForm):
+   
+    name = StringField('Your name',validators=[Required()])
+    location = StringField('Country/City',validators=[Required()])
+    contact =StringField('Email/phone',validators=[Required()])
+    bio = TextAreaField('Add a description')
+    submit = SubmitField('submit')

@@ -2,8 +2,9 @@ import os
 
 class Config:
 
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://feven:123@localhost/fashoni'
+    # SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY='qwerty'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://emma:1234@localhost/fashoni'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     #  email configurations

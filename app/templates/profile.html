@@ -1,0 +1,46 @@
+{% extends 'base.html'%} 
+{% import 'bootstrap/wtf.html' as wtf%} 
+{%block styles%}
+       {{ super() }}
+       <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+   {%endblock%}
+
+{% block content %}
+
+<head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+        
+</head>
+
+<body>
+        <div class="container">
+         <div class="d-flex justify-content-center h-100">
+             <div class="image_outer_container">
+                 <div class="green_icon"></div>
+                 <div class="image_inner_container">
+                     <img class="img-responsive img-circle" src="https://i0.wp.com/tricksmaze.com/wp-content/uploads/2017/04/Stylish-Girls-Profile-Pictures-36.jpg?resize=300%2C300&ssl=1">
+                 </div>
+             </div>
+         </div>
+
+         <div>
+            <ul>
+                <li>Name: {{profile.name }}</li>
+                <li>Location: {{profile.adress}}</li>
+                <li>Contact: {{profile.contact }}</li>
+                <li>Bio: {{profile.bio}} </li>
+            </ul>
+         </div>
+
+
+         <a  href="{{url_for('main.update')}}" ><button type="button">Edit</button></a>
+
+     </div>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+ 
+ {% endblock%}
