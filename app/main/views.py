@@ -35,3 +35,14 @@ def send_welcome_email(email):
     Send welcome email to new subscriber
     '''
     mail_message("Welcome to Fa-Shoni","email/welcome_user", email)
+    
+@main.route('/children')
+def children():
+    return render_template('children.html')
+@main.route('/men')
+def men():
+    return render_template('men.html')
+@main.route('/women')
+def women():
+    return render_template('women.html')
+

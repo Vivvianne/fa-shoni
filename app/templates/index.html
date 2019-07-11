@@ -1,4 +1,5 @@
 {% extends 'base.html'%}{% import 'bootstrap/wtf.html' as wtf%} {% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -22,36 +23,39 @@
     </ul>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img id='c-slide' src="../static/photo/category/c4.jpg" alt="children1">
+            <img id='c-slide' src="../static/photo/category/c4.jpg" alt="children">
             <div class="carousel-caption">
                 <h3 id="carousel-heading">Children's Collection</h3>
                 <p id="carousel-text">Browse our catalogue for the latest in Children's fashion</p>
-                <div id="button-spacing"><button id="carousel-button"><a href="children.html">EXPLORE</a></button></div>
+                <div id="button-spacing"><button id="carousel-button"><a href="{{ url_for('main.children') }}">EXPLORE</a></button></div>
             </div>
         </div>
         <div class="carousel-item">
-            <img id='c-slide' src="../static/photo/category/w7.jpg" alt="children2">
+            <img id='c-slide' src="../static/photo/category/w7.jpg" alt="women">
             <div class="carousel-caption">
                 <h3 id="carousel-heading">Truly African</h3>
                 <p id="carousel-text">Embrace a touch of tradition with the charming collection for women</p>
-                <div id="button-spacing"><button id="carousel-button"><a href="children.html">EXPLORE</a></button>
+                <div id="button-spacing"><button id="carousel-button"><a href="{{ url_for('main.women') }}">EXPLORE</a></button>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img id='c-slide' src="../static/photo/category/m6.jpg" alt="children3">
+            <img id='c-slide' src="../static/photo/category/m6.jpg" alt="men">
             <div class="carousel-caption">
                 <h3 id="carousel-heading">Make your Man stand out</h3>
                 <p id="carousel-text">Explore the latest in trendy designs for Men.</p>
-                <div id="button-spacing"><button id="carousel-button"><a href="children.html">EXPLORE</a></button></div>
+                <div id="button-spacing"><button id="carousel-button"><a href="{{ url_for('main.men') }}">EXPLORE</a></button></div>
             </div>
         </div>
 
     </div>
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <a class="carousel-control-prev" href="{{ url_for('main.children') }}" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
+    <a class="carousel-control-next" href="{{ url_for('main.women') }}" data-slide="next">
+        <div class="carousel-control-next-icon"></div>
+    </a>
+    <a class="carousel-control-next" href="{{ url_for('main.men') }}" data-slide="next">
         <div class="carousel-control-next-icon"></div>
     </a>
 </div>
@@ -91,10 +95,10 @@
             <h4>Quick Links</h4>
             <div id="page-links">
                 <hr id="line" />
-                <a href="#home"><i class="fa fa-home"></i> home</a><br />
-                <a href="#what-we-do"><i class="fa fa-calendar"></i> Services</a><br />
-                <a href="#register"><i class="fa fa-registered"></i> register</a><br />
-                <a href="#login"><i class="fa fa-sign-in"></i> login</a><br />
+                <a href="/"><i class="fa fa-home"></i> home</a><br />
+                
+               <a href="{{url_for('auth.register')}}"><i class="fa fa-registered"></i> register</a><br />
+               <a href="{{url_for('auth.login')}}"><i class="fa fa-sign-in"></i> sign in</a><br />
             </div>
         </div>
     </div>
