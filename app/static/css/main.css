@@ -246,7 +246,6 @@ a.sign {
 
 
 /* About Us*/
-
 #about-us {
     background-color: #eff0e0;
     color: black;
@@ -256,12 +255,16 @@ a.sign {
     padding-bottom: 50px;
     padding-left: 300px;
     padding-right: 300px;
-}
-
-#about-us h1 {
-    text-align: center;
-}
-
-#about-us p {
-    text-align: center;
-}
+  }
+  #about-us h1 {
+    padding-bottom: 1%;
+    font-size: 52px;
+    color: rgb(22, 20, 20);
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgb(216, 186, 186);
+  }
+  #about-us p {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(15, 15, 13);
+  }
