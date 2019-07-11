@@ -33,10 +33,10 @@ h1{
     background-color: white;
 }
 .flip-card-back {
-    background-color: rgb(204, 198, 198);
-    color: white;
+    background-color:rgb(185, 179, 179);
+    color: black;
     transform: rotateY(180deg);
-}
+ }
 /* .footer {
     position: fixed;
     left: 0;

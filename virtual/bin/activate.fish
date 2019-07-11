@@ -29,11 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
 set -gx VIRTUAL_ENV "/home/nkimani/Documents/Moringa-core/Python/flask/fa-shoni/virtual"
-=======
-set -gx VIRTUAL_ENV "/home/feven/Documents/fa-shoni/virtual"
->>>>>>> 8e25cbad2869719c45c5649920f0b8ae76070931
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

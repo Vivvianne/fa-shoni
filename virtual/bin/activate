@@ -37,11 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
 VIRTUAL_ENV="/home/nkimani/Documents/Moringa-core/Python/flask/fa-shoni/virtual"
-=======
-VIRTUAL_ENV="/home/feven/Documents/fa-shoni/virtual"
->>>>>>> 8e25cbad2869719c45c5649920f0b8ae76070931
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

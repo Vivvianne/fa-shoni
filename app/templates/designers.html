@@ -1,3 +1,25 @@
-{% extends 'base.html'%} {% import 'bootstrap/wtf.html' as wtf%} {% block content %}
-{{ title }}
-{% endblock%}
+{% extends 'base.html' %}
+{% block styles%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename="css/main.css")}}">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+{%endblock%}
+{% block content%}
+<div class="jumbotron text-center" >
+        <h1 style="font-family: 'Kaushan Script', cursive;">Designers</h1>
+        <input style="float:right;margin-top:10px;border-radius:5px;color:red;"  type="text" placeholder="Search.." name="search">
+    </div>
+    <div class="container">
+            {%for design in design_list%}
+            <div class="row" style="padding-bottom: 10px;">
+                <div style="border: 1px solid rgb(148, 141, 138);padding: 10px;border-radius: 5px;box-shadow: 2px 3px green;background-color: pink;text-align: center;">
+                    <!-- here we import the image of the user -->
+                    <h4>Name : {{user.name}}</h4>
+                    <p>Location : {{user.adress}}</p>
+                    <p>Contact : {{profile.contact}} </p>
+                    <p>Bio : {{profile.bio}}</p>
+                </div>
+            </div> 
+            {%endfor%}
+    </div>
+{% endblock %}
