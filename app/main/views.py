@@ -27,10 +27,13 @@ def subscribe_handler(email):
 
 
 def subscribe(email):
-    new_subscription = Subscription(email=email)
-    new_subscription.save_email()
+    try:
+        new_subscription = Subscription(email=email)
+        new_subscription.save_email()
 
-    send_welcome_email(email=email)
+        send_welcome_email(email=email)
+    except Exception as e:
+        print("Error while subscribing email:" + str(e), flush=True)
 
 
 @main.route('/unsubscribe/<email>')
@@ -40,12 +43,16 @@ def unsubscribe_handler(email):
 
 
 def unsubscribe(email):
-    sub = Subscription.query.filter_by(email=email).first()
-    if sub is not None:
-        db.session.delete(sub)
-        db.session.commit()
 
-    mail_message("Farewell from Fa-Shoni", "email/unsubscribe_user", email, email=email)
+    try:
+        sub = Subscription.query.filter_by(email=email).first()
+        if sub is not None:
+            db.session.delete(sub)
+            db.session.commit()
+
+        mail_message("Farewell from Fa-Shoni", "email/unsubscribe_user", email, email=email)
+    except Exception as e:
+        print("Error while unsubscribing email:" + str(e), flush=True)
 
 
 def send_welcome_email(email):
