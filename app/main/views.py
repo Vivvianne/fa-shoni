@@ -6,33 +6,30 @@ def index():
     '''
     View the home page (to be added from landing page syntax)
     '''
+    return render_template('men.html')
+@app.route('/designers',methods=['GET'])
+def designers():
     
-    # children =b.get_b('children')
-    # men =b.get_b('men')
-    # women =b.get_b('women')
-    return render_template('cart.html')
-# @main.route('/b/children')
-# def children():
-#     b=b.get_b('children')
-#     return render_template('children.html',b=b)
-# @main.route('/b/men')
-# def men():
-#     b = b.get_b('men')
-#     return render_template('men',b=b)
-# @main.router('/b/women')
-# def women():
-#     b = b.get_b('women')
-#     return render_template('women',b=b)
-    
-# @app.route("/cart/add", methods=['POST'])
-# def add_to_cart():
-#     cart = ShoppingCart.add(product=request.form['product'], quantity=int(request.form['quantity']))
-#     return jsonify(cart)
-# @app.route("/cart")
-# def view_cart():
-#     cart = ShoppingCart.get()
-#     return render_template("cart.html", cart=cart)
-# @app.route("/cart/remove/<item_id>", methods=['POST'])
-# def remove_from_cart(item_id):
-#     cart = ShoppingCart.remove(item_id)
-#     return jsonify(cart)
+    return render_template('designers.html')
+@app.route('/designers')
+def search_designers(search):
+    designers = []
+    search_string = search.data['search']
+    if search_string:
+        if search.data['select'] == 'Artist':
+            qry = db_session.query(User, Profile).filter(
+                Profile.id==User.profile_id).filter(
+                    Profile.name.contains(search_string))
+            results = [item[0] for item in qry.all()]
+        elif search.data['select'] == 'User':
+            qry = db_session.query(User).filter(
+                User.title.contains(search_string))
+            results = qry.all()
+    if not results:
+        flash('No results found!')
+        return redirect('/')
+    else:
+        # display results
+        table = Profile(profile)
+        table.border = True
+        return render_template('designer.html', table=table)

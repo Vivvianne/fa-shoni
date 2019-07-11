@@ -1,20 +1,3 @@
 {%block content%}
-<nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Fa-shoni</a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{url_for('auth.login')}}"><span class="glyphicon glyphicon-user"></span> Sign in</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="cart box_1">
-            <h3> $<span id="cart_total" class="simpleCart_total"> {{ cart.total }} </span>
-            (<span id="cart_items_count" class="simpleCart_quantity"> {{ cart.count }} Items</span>)
-            <img src="/static/images/bag.png" alt="" /></h3>
-        
-            <p><a href="/cart" class="simpleCart_empty">Your cart</a></p>
-            <div class="clearfix"> </div>
-        </div>
-{%end block%}
+<h1>navbar</h1>
+{%endblock%}
