@@ -34,7 +34,7 @@ class User(UserMixin,db.Model):
 class Subscription(db.Model):
     __tablename__ = 'subscription'
     id = db.Column(db.Integer,primary_key = True)
-    email = db.Column(db.String(255))
+    email = db.Column(db.String(255), unique=True, nullable=False)
 
     def save_email(self):
         db.session.add(self)
