@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/nkimani/Documents/Moringa-core/Python/flask/fa-shoni/virtual/bin/python
+=======
+#!/home/feven/Documents/fa-shoni/virtual/bin/python3.7
+>>>>>>> 8e25cbad2869719c45c5649920f0b8ae76070931
 # -*- coding: utf-8 -*-
 import re
 import sys

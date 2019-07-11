@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 #!/home/nkimani/Documents/Moringa-core/Python/flask/fa-shoni/virtual/bin/python3.6
 
+=======
+#!/home/feven/Documents/fa-shoni/virtual/bin/python3.7
+>>>>>>> 8e25cbad2869719c45c5649920f0b8ae76070931
 # -*- coding: utf-8 -*-
 import re
 import sys
@@ -7,5 +11,9 @@ import sys
 from setuptools.command.easy_install import main
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+=======
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+>>>>>>> 8e25cbad2869719c45c5649920f0b8ae76070931
     sys.exit(main())

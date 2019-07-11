@@ -1,24 +1,27 @@
+import os
+
 class Config:
-    '''
-    The main configuration settings
-    '''
-    pass
+
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://feven:123@localhost/fashoni'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    #  email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+
+
 class ProdConfig(Config):
-    '''
-    Production child class for the configuration class
-    Args:
-    Config:The main configuration setting class
-    '''
     pass
+
+
 class DevConfig(Config):
-    '''
-    Development child class for the configuration setting
-    Args:
-    Config:THe configuration main class
-    '''
     DEBUG = True
-     
+
 config_options = {
-    'development':DevConfig,
-    'production':ProdConfig
+'development':DevConfig,
+'production':ProdConfig
 }
