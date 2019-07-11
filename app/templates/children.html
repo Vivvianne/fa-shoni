@@ -1,5 +1,5 @@
-{%extends 'base.html'%}
-{%block styles %}
+{% extends 'base.html'%}
+{% block styles %}
   {{super()}}
   <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -15,12 +15,13 @@
                                     <img src="../static/photos/children/image1child.jpg" alt="no image" style="height:400px;width:300px;">
                               </div>
                               <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                    <h2>Description</h2>
+                                    <h2>Shirt/Emma</h2>
                                     <p>Type : Shirt and Trouser</p>
                                     <p>Material : Kitenge</p>
                                     <p>Size : All available</p>
                                     <p>Price : 1000(full set)</p>
-                                    <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                    <p>Designed by : Emma Sharon</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                   </div> 
                             </div>
                           </div>
@@ -33,12 +34,13 @@
                                         <img src="../static/photos/children/image2child.jpg" alt="no image" style="height:400px;width:300px;">
                                   </div>
                                   <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                        <h2>Description</h2>
+                                        <h2>Vest/philip</h2>
                                         <p>Type : Vest and Short</p>
                                         <p>Material : Kitenge and Cotton</p>
                                         <p>Size : All available</p>
                                         <p>Price : 700(full set)</p>
-                                        <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                        <p>Designed by :Philip Kariuki</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                       </div> 
                                 </div>
                               </div>
@@ -50,12 +52,13 @@
                                         <img src="../static/photos/children/image3child.jpg" alt="no image" style="height:400px;width:300px;">
                                   </div>
                                   <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                        <h2>Description</h2>
+                                        <h2>Cap/Feven</h2>
                                         <p>Type : Cap,Vestshirt and Trouser</p>
                                         <p>Material : Kitenge and cotton</p>
                                         <p>Size : All available</p>
                                         <p>Price : 1100(full set)</p>
-                                        <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                        <p>Designed by : Feven</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                       </div> 
                                 </div>
                               </div>
@@ -70,12 +73,13 @@
                                     <img src="../static/photos/children/image4child.jpg" alt="no image" style="height:400px;width:300px;">
                               </div>
                               <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                    <h2>Description</h2>
+                                    <h2>Nigerian/Tony</h2>
                                     <p>Type : Nigerian Mordern Cloak</p>
                                     <p>Material : Kitenge</p>
                                     <p>Size : All available</p>
                                     <p>Price : 1000</p>
-                                    <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                    <p>Designed by : Tony Kihara</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                   </div> 
                             </div>
                           </div>
@@ -88,12 +92,13 @@
                                     <img src="../static/photos/children/image5child.jpg" alt="no image" style="height:400px;width:300px;">
                               </div>
                               <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                    <h2>Description</h2>
+                                    <h2>Dress/Vivian</h2>
                                     <p>Type : Dress</p>
                                     <p>Material : Kitenge</p>
                                     <p>Size : All available</p>
                                     <p>Price : 700</p>
-                                    <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                    <p>Designed by : Vivian Kimani</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                   </div> 
                             </div>
                           </div>
@@ -106,12 +111,13 @@
                                     <img src="../static/photos/children/image6child.jpg" alt="no image" style="height:400px;width:300px;">
                               </div>
                               <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                    <h2>Description</h2>
+                                    <h2>Dress/David</h2>
                                     <p>Type : Dress</p>
                                     <p>Material : Kitenge</p>
                                     <p>Size : All available</p>
                                     <p>Price : 800</p>
-                                    <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                    <p>Designed by : David l</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                   </div> 
                             </div>
                           </div>
@@ -125,12 +131,13 @@
                                         <img src="../static/photos/children/image7child.jpg" alt="no image" style="height:400px;width:300px;">
                                   </div>
                                   <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                        <h2>Description</h2>
+                                        <h2>cloth/Seth</h2>
                                         <p>Type : Full girl cloth trouser</p>
                                         <p>Material : Kitenge</p>
                                         <p>Size : All available</p>
                                         <p>Price : 1000</p>
-                                        <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                        <p>Designed by : Seth Me</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                       </div> 
                                 </div>
                               </div>
@@ -142,12 +149,13 @@
                                         <img src="../static/photos/children/image8child.jpg" alt="no image" style="height:400px;width:300px;">
                                   </div>
                                   <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                        <h2>Description</h2>
+                                        <h2>Dress/Katana</h2>
                                         <p>Type : Dress</p>
                                         <p>Material : Kitenge</p>
                                         <p>Size : All available</p>
                                         <p>Price : 600</p>
-                                        <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                        <p>Designed by : Katane de Katana</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                       </div> 
                                 </div>
                               </div>
@@ -159,12 +167,13 @@
                                         <img src="../static/photos/children/image9child.jpg" alt="no image" style="height:400px;width:300px;">
                                   </div>
                                   <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
-                                        <h2>Description</h2>
+                                        <h2>Coat/florence</h2>
                                         <p>Type : Girlcoat and tight</p>
                                         <p>Material : Kitenge and Cotton</p>
                                         <p>Size : All available</p>
                                         <p>Price : 1100(full set)</p>
-                                        <p>To Contact designer visit<a style="color:red;" href=""> here</a></p>
+                                        <p>Designed by : Florence</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
                                       </div> 
                                 </div>
                               </div>
@@ -172,4 +181,4 @@
             </div>
         </div>
     </div>
-{%endblock%}
+{% endblock %}
