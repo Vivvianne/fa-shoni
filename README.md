@@ -35,7 +35,7 @@
 ~~~
 
 * Flask
-* Python :snake:
+* Python 
 * Text Editor eg Atom or Vscode
 * Terminal
 
