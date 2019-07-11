@@ -1,1 +1,42 @@
 {%extends 'bootstrap/base.html'%}
+{%block content%}
+<div class="Section5">
+        <div class="row">
+          <div class="col-md-5">
+            <div id="feedback">
+              <h4>Subscribe Now</h4>
+              <form id="feedback-form" action="" method="POST" autocomplete="">
+                <div id="feedback-email">
+                  <input type="email" id="email" name="" placeholder="Your Email Address" required />
+                </div>
+                <div id="feedback-button">
+                  <input id="feedback-submit" type="submit" name="" value="Subscribe">
+                </div>
+              </form>
+            </div>
+          </div>
+   
+          <div class="col-md-3">
+            <div id="">
+              <h4>Contact Us</h4>
+              <div id="reach-us">
+                <hr id="line" />
+                <p><i class="fa fa-phone"></i> Phone:(+254)712345678</p>
+                <p><i class="fa fa-map-marker"></i> Location: Ngong Lane, Off Ngong Road</p>
+                <p><i class="fa fa-envelope"></i> Email: fa-shoni@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Quick Links</h4>
+            <div id="page-links">
+              <hr id="line" />
+              <a href="#home"><i class="fa fa-home"></i> home</a><br />
+              <a href="#what-we-do"><i class="fa fa-calendar"></i> Services</a><br />
+              <a href="#register"><i class="fa fa-registered"></i> register</a><br />
+              <a href="#login"><i class="fa fa-sign-in"></i> login</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endblock%}
