@@ -45,4 +45,12 @@ def men():
 @main.route('/women')
 def women():
     return render_template('women.html')
+@main.route('/designers')
+def designer():
+
+   '''
+   View root page function that returns the index page and its data
+   '''
+   title='This is designers page'
+   return render_template('designers.html',title='title')
 

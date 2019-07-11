@@ -8,6 +8,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li><a class="nav-link" href="{{url_for('main.designer')}}">Designers</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" style="text-align: right; font-size: 17px">
             {% if current_user.is_authenticated %}
