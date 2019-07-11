@@ -1,5 +1,5 @@
 
-export MAIL_USERNAME='feven.m.woldu@gmail.com'
-export MAIL_PASSWORD='godisgood!'
-export SECRET_KEY='<Flask WTF Secret Key>'
+export MAIL_USERNAME='emmasharon19@gmail.com'
+export MAIL_PASSWORD='emmasharon2'
+export SECRET_KEY='qwerty'
 python3 manage.py server
