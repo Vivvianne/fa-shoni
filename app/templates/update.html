@@ -1,0 +1,32 @@
+{% extends 'base.html'%} 
+{% import 'bootstrap/wtf.html' as wtf%} 
+
+{%block styles%}
+       {{ super() }}
+       <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+   {%endblock%}
+
+{% block content %}
+
+<div class="container">
+     <!-- profile pic -->
+        <div class="col-md-4">
+                <img class="img-responsive img-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GP3urgpyED9ghZnOJKIqL50iAnegUpSke7_MkrurKkkqtmpw" alt="" class="img-thumbnail">
+                  <input type="file" name="photo" class="form-control" required>
+<!-- form -->
+        <div class="row">
+            <div class="col-md-2"> </div>
+            <div class="col-md-8">
+    
+                {{wtf.quick_form(form)}}
+    
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+    
+   
+    
+   
+{% endblock%}
