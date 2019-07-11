@@ -3,6 +3,7 @@ from flask_login import UserMixin
 from . import login_manager
 from werkzeug.security import generate_password_hash,check_password_hash
 
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -14,6 +15,7 @@ class User(UserMixin,db.Model):
     email = db.Column(db.String(255), unique=True, index=True)
     password_secure = db.Column(db.String(255))
     profile_picture = db.Column(db.String(255))
+    profile = db.relationship('Profile', backref = 'user', lazy ="dynamic")
 
     @property
     def password(self):
@@ -42,3 +44,31 @@ class Subscription(db.Model):
    
     def __repr__(self):
         return f'Subscription {self.email}'
+    
+class Profile(db.Model):
+    __tablename__ = 'profile'
+    id = db.Column(db.Integer,primary_key = True)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    name = db.Column(db.String(255))
+    contact = db.Column(db.String(255))
+    bio = db.Column(db.String(255))
+    adress = db.Column(db.String(255))
+    profile_picture = db.Column(db.String(255))
+    
+    @classmethod
+    def get_profile(cls, id):
+       quiz = Profile.query.filter_by(id=id).first()
+       return profile
+   
+    def save_profile(self):
+        db.session.add(self)
+        db.session.commit()
+    
+    def __repr__(self):
+        return f'Profile {self.name,bio,adress,contact}'
+    
+
+    
+
+    
+    
