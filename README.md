@@ -6,11 +6,11 @@
 
 ~~~
 
- -:woman: Vivian Kamau
- -:boy: Philip
- -:woman: Feven
- -:woman: Sharon Emma
- -:boy: Tony Kihara
+* Vivian Kamau :woman:
+* Philip :boy:
+* Feven :woman:
+* Sharon Emma :woman:
+* Tony Kihara :boy:
 
 ~~~
 ---------------------------
@@ -43,17 +43,23 @@
 
 ~~~
 
- How to Install the app:
- -first git clone the app : $ git clone the (app url link)
- -Using the terminal get into the app : $ cd fa-shoni
- -Create a virtual environment : $ python3.6 -m venv --without-pip virtual (then) $ source virtual/bin/activate
- -Download the latest pip virtual environment : $ curl https://bootstrap.pypa.io/get-pip.py | python
- -Run the application:
-                     ~~~
-                     - $ python3.6 manage.py server
-                     - $ chmod a+x .start sh
-                     - $ ./start.sh
-                     ~~~
+ How to Install the app
+
+-first git clone the app : $ git clone the (app url link)
+
+-Using the terminal get into the app : $ cd fa-shoni
+
+-Create a virtual environment : $ python3.6 -m venv --without-pip virtual (then) $ source virtual/bin/activate
+
+-Download the latest pip virtual environment : $ curl https://bootstrap.pypa.io/get-pip.py | python
+
+-Run the application
+
+~~~
+- $ python3.6 manage.py server
+- $ chmod a+x .start sh
+- $ ./start.sh
+~~~
 
 ---------------------------------------
 
