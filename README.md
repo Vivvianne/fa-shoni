@@ -4,7 +4,6 @@
 
 ## :family: AUTHORS :family:
 
-~~~
 
 * Vivian Kamau :woman:
 * Philip :boy:
@@ -12,7 +11,6 @@
 * Sharon Emma :woman:
 * Tony Kihara :boy:
 
-~~~
 ---------------------------
 
 ## DESCRIPTION :scroll:
@@ -44,7 +42,7 @@
 ~~~
 
  How to Install the app
-
+~~~
 -first git clone the app : $ git clone the (app url link)
 
 -Using the terminal get into the app : $ cd fa-shoni
@@ -54,7 +52,7 @@
 -Download the latest pip virtual environment : $ curl https://bootstrap.pypa.io/get-pip.py | python
 
 -Run the application
-
+~~~
 ~~~
 - $ python3.6 manage.py server
 - $ chmod a+x .start sh
@@ -74,7 +72,7 @@
 
 ## TECHNOLOGIES USED :satellite:
 
-* Python :snake:
+* Python 
 * HTML
 * Css
 * Flask
