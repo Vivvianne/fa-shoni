@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/cart.css">
+
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+
+  <script src="../static/js/cart.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+
+
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+ 
+{% endblock %}
+{%block content%}
+    <h1 style="font-family: 'Kaushan Script', cursive;">Men Category</h1>
+
+
+
+
+    <section class="details">
+          <div class="col-md-6">
+                <p></p>
+          </div>
+          <div class="col-md-3">
+                <p></p>
+          </div>
+          <div class="col-md-3 cart-picture">
+                <i class="fa fa-shopping-cart"></i>
+                <p id="cart-items">0</p>
+          </div>
+    </section>
+    <div class="cart-full">
+
+    </div>
+    <section class="header">
+          <div class="row" id="header">
+          </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+            <div class="col-md-4 price">
+                    <div class="flip-card" >
+                            <div class="flip-card-inner" >
+                              <div class="flip-card-front" >
+                                    <img src="../static/photos/men/image1men.jpg" alt="no image" style="height:400px;width:300px;">
+                              </div>
+                              <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                    <h2 class="title1">Shirt/Dennis</h2>
+                                    <p>Type :Shirt and Trouser</p>
+                                    <p>Material : Kitenge</p>
+                                    <p>Size : All available</p>
+                                    <p class="price1">Price : 1100(full set)</p>
+                                    <p>Designed by : Dennis</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart1">
+
+                                    
+                                  </div> 
+                            </div>
+                          </div>
+                </div>
+                <div class="col-md-4 price">
+                        <div class="flip-card" >
+                                <div class="flip-card-inner" >
+                                  <div class="flip-card-front" >
+                                        <img src="../static/photos/men/image2men.jpg" alt="no image" style="height:400px;width:300px;">
+                                  </div>
+                                  <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                        <h2 class="title2">Shirt/Esther</h2>
+                                        <p>Type : Shirt</p>
+                                        <p>Material : Kitenge</p>
+                                        <p>Size : All available</p>
+                                        <p class="price2">Price : 700</p>
+                                        <p>Designed by : Esther N</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                          <img src="../static/photos/add2.png" alt="" srcset="" class="addcart2">
+
+                                        
+                                      </div> 
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-4 price">
+                        <div class="flip-card" >
+                                <div class="flip-card-inner" >
+                                  <div class="flip-card-front" >
+                                        <img src="../static/photos/men/image3men.jpg" alt="no image" style="height:400px;width:300px;" >
+                                  </div>
+                                  <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                        <h2 class="title3">Shirt/Juliet</h2>
+                                        <p>Type : Shirt and Trouser</p>
+                                        <p>Material : Kitenge</p>
+                                        <p>Size : All available</p>
+                                        <p class="price3">Price : 1100(full set)</p>
+                                        <p>Designed by : Juliet</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart3">
+
+                                      </div> 
+                                </div>
+                              </div>
+                </div>
+    </div>
+    <div class="row" style="padding-top:130px;">
+            <div class="col-md-4 price">
+                    <div class="flip-card" >
+                            <div class="flip-card-inner" >
+                              <div class="flip-card-front" >
+                                    <img src="../static/photos/men/image4men.jpg" alt="no image" style="height:400px;width:300px;">
+                              </div>
+                              <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                    <h2 class="title4">Sweater/Karumba</h2>
+                                    <p>Type : Sweater</p>
+                                    <p>Material : Kitenge</p>
+                                    <p>Size : All available</p>
+                                    <p class="price4">Price : 700</p>
+                                    <p>Designed by : John Karumba</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart4">
+
+                              </div> 
+                            </div>
+                        </div>
+            </div>
+            <div class="col-md-4 price">
+                    <div class="flip-card" >
+                            <div class="flip-card-inner" >
+                              <div class="flip-card-front" >
+                                    <img src="../static/photos/men/image5men.jpg" alt="no image" style="height:400px;width:300px;">
+                              </div>
+                              <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                    <h2 class="title5">Hood/Buy</h2>
+                                    <p>Type : Hood</p>
+                                    <p>Material : Kitenge and silk</p>
+                                    <p>Size : All available</p>
+                                    <p class="price5">Price : 600</p>
+                                    <p>Designed by:Buy Me</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart5">
+
+                                  </div> 
+                            </div>
+                          </div>
+            </div>
+            <div class="col-md-4 price">
+                    <div class="flip-card" >
+                            <div class="flip-card-inner" >
+                              <div class="flip-card-front" >
+                                    <img src="../static/photos/men/image6men.jpg" alt="no image" style="height:400px;width:300px;">
+                              </div>
+                              <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                    <h2 class="title6">Sweater/Pass</h2>
+                                    <p>Type : Sweater</p>
+                                    <p>Material : Silk</p>
+                                    <p>Size : All available</p>
+                                    <p class="price6">Price : 500</p>
+                                    <p>Designed by : Pass me not</p>
+                                    <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart6">
+
+                                  </div> 
+                            </div>
+                          </div>
+            </div>
+    </div>
+</div>
+            <div class="row" style="padding-top:130px;">
+                <div class="col-md-4 price">
+                        <div class="flip-card" >
+                                <div class="flip-card-inner" >
+                                  <div class="flip-card-front" >
+                                        <img src="../static/photos/men/image7men.jpg" alt="no image" style="height:400px;width:300px;">
+                                  </div>
+                                  <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                        <h2 class="title7">Cap/Roy</h2>
+                                        <p>Type : Cap and Shirt</p>
+                                        <p>Material : Kitenge</p>
+                                        <p>Size : All available</p>
+                                        <p class="price7">Price : 1000(full set)</p>
+                                        <p>Designed by : Roy</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart7">
+
+                                      </div> 
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-4 price">
+                        <div class="flip-card" >
+                                <div class="flip-card-inner" >
+                                  <div class="flip-card-front" >
+                                        <img src="../static/photos/men/image8men.jpg" alt="no image" style="height:400px;width:300px;">
+                                  </div>
+                                  <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                        <h2 class="title8">Cloth/William</h2>
+                                        <p>Type : Full cloth</p>
+                                        <p>Material : Kitenge</p>
+                                        <p>Size : All available</p>
+                                        <p class="price8">Price : 1300(full set)</p>
+                                        <p>Designed by : William</p>
+                                        <p>To Contact designer visit<a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart8">
+
+                                      </div> 
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-4 price">
+                        <div class="flip-card" >
+                                <div class="flip-card-inner" >
+                                  <div class="flip-card-front" >
+                                        <img src="../static/photos/men/image9men.jpg" alt="no image" style="height:400px;width:300px;">
+                                  </div>
+                                  <div class="flip-card-back" style="font-family: 'Gloria Hallelujah', cursive;">
+                                        <h2 class="title9">Shirt/Wilstan</h2>
+                                        <p>Type : Shirt and Trouser</p>
+                                        <p>Material : Kitenge</p>
+                                        <p>Size : All available</p>
+                                        <p class="price9">Price : 1100(full set)</p>
+                                        <p>Designed by : Wilstan</p>
+                                        <p>To Contact designer visit <a style="color:red;" href="{{url_for('main.designers')}}"> here</a></p>
+                                    <img src="../static/photos/add2.png" alt="" srcset="" class="addcart9">
+
+                                      </div> 
+                                </div>
+                              </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
