@@ -24,8 +24,9 @@
 
  |Behaviour|:arrow_up: INput|:arrow_down: OUTput|
  |:------|:------|:------|
- |The customers should be able to view the products and select to buy|The Designer should be able to sign in or register as a new user.|The buyer can see the designers design and contact the designer so as to buy|
- |The buyer is able to  buy the clothes|When the user gets into the app he can choose the genders clothes and choose one from them|When he clicks to the link in the flip he is able to see more about the designer and contact her.|
+ |The customers should be able to view and buy a garment| The customer should choose a product| A customer should be able to add to cart his/her selected product |
+ | Get an email after subcription | Key in your email address to subscribe | One is a subcriber when one get's an email |
+ |A designer should be able have an account in the app |A designer should be able to register/sign in into his/her account|A designer should be able to view , update and add some of their products in their profile page.|
 
  --------------------------------------------------------------
 
