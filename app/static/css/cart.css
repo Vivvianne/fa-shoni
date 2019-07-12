@@ -1,0 +1,158 @@
+
+  .cart-picture{
+    display: inline-flex;
+    color: #333; 
+    transition: all 0.3s;
+    margin-top: -15px;
+    padding: auto;
+  }
+  .fa-shopping-cart{
+    font-size: 34px;
+  }
+  #cart-items{
+    margin-top: 15px;
+  }
+  .cart-picture:hover{
+    transform: scale(1.1);
+  }
+  .cart-full{
+    display: none;
+    background-color: rgb(228, 236, 228);
+    width: 40%;
+    margin: auto;
+    padding:auto;
+  }
+  .cart-display{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .item-title{
+    
+    font-size: 22px;
+  }
+  .item-price{
+    margin-top: 15px;
+    font-size: 22px;
+    
+  }
+  .fa-trash{
+    margin-top: 15px;
+    font-size: 22px;
+    transition: all 0.3s;
+  }
+  .fa-trash:hover{
+    transform: scale(1.1);
+  }
+  #categories{
+    height: 40px;
+    width:90%;
+    margin:auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-right: 15px;
+    display: flex;
+  }
+  .category{
+    border: #333 solid 1px;
+  }
+  .categories p{
+    float: left;
+    display: block;
+    color: #333;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 auto;
+  }
+  .items{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .food1,.food2,.food3,.food3,.food4,.food5,.food6,.food7,.food8,.food9,.food10,.food11,.food12,.food13,.food14,.food15,.food16,.food17,.food18,.food19,.food20,.food21,.food22,.food23,.food24,.food25{
+    margin-top: 30px;
+    border-top: #333 solid 1px;
+  }
+  .addcart1,.addcart2,.addcart3,.addcart4,.addcart5,.addcart6,.addcart7,.addcart8,.addcart9,.addcart10,.addcart11,.addcart12,.addcart13,.addcart14,.addcart15,.addcart16,.addcart17,.addcart18,.addcart19,.addcart20,.addcart21,.addcart22,.addcart23,.addcart24,.addcart25{
+    transition: all 0.3s;
+  }
+  .addcart1:hover,.addcart2:hover,.addcart3:hover,.addcart4:hover,.addcart5:hover,.addcart6:hover,.addcart7:hover,.addcart8:hover,.addcart9:hover,.addcart10:hover,.addcart11:hover,.addcart12:hover,.addcart13:hover,.addcart14:hover,.addcart15:hover,.addcart16:hover,.addcart17:hover,.addcart18:hover,.addcart19:hover,.addcart20:hover,.addcart21:hover,.addcart22:hover,.addcart23:hover,.addcart24:hover,.addcart25:hover{
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+  }
+  .price{
+    float: right;
+  }
+  .price{
+    display: inline-flex;
+    margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .price img{
+    width:39px;
+    height: 33px;
+    padding: 3px;
+  }
+  .price p{
+    padding: 3px;
+    font-size: 24px;
+  }
+  .description{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .fa{
+    padding: 10px;
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    background-color: white;
+  }
+  .flip-card-back {
+    background-color: rgb(204, 198, 198);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back h2{
+    font-size: 25px;
+  }
+  .flip-card-back p{
+    font-size: 15px;
+  }

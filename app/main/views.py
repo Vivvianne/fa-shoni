@@ -16,25 +16,52 @@ def index():
     '''
 
     form = SubscriptionForm()
+    if form.validate_on_submit():
+        subscribe(email=form.email.data)
 
-   
+    return render_template('index.html', SubscriptionForm=form)
 
-    if form.validate_on_submit():                
-        try:
-            new_subscription = Subscription(email=form.email.data)
-            new_subscription.save_email()
 
-            send_welcome_email(email=form.email.data)
-        except:
-            print("Database Exception", flush = True)
+@main.route('/subscribe/<email>')
+def subscribe_handler(email):
+    subscribe(email)
+    return redirect(url_for('main.index'))
 
-    return render_template('index.html', SubscriptionForm = form)
+
+def subscribe(email):
+    try:
+        new_subscription = Subscription(email=email)
+        new_subscription.save_email()
+
+        send_welcome_email(email=email)
+    except Exception as e:
+        print("Error while subscribing email:" + str(e), flush=True)
+
+
+@main.route('/unsubscribe/<email>')
+def unsubscribe_handler(email):
+    unsubscribe(email)
+    return redirect(url_for('main.index'))
+
+
+def unsubscribe(email):
+
+    try:
+        sub = Subscription.query.filter_by(email=email).first()
+        if sub is not None:
+            db.session.delete(sub)
+            db.session.commit()
+
+        mail_message("Farewell from Fa-Shoni", "email/unsubscribe_user", email, email=email)
+    except Exception as e:
+        print("Error while unsubscribing email:" + str(e), flush=True)
+
 
 def send_welcome_email(email):
     '''
     Send welcome email to new subscriber
     '''
-    mail_message("Welcome to Fa-Shoni","email/welcome_user", email)
+    mail_message("Welcome to Fa-Shoni", "email/welcome_user", email, email=email)
     
 @main.route('/children')
 def children():
