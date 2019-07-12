@@ -1,4 +1,4 @@
-# :jeans: :dress: FA-SHONI :womans_clothes: :necktie:
+# FA-SHONI
 
 --------------
 
@@ -15,7 +15,8 @@
 
 ## DESCRIPTION :scroll:
 
- It’s not easy to get a ready made african outwear for a fuction that fast. It’s also not easy to get a tailor or designer :womans_clothes: on a short notice unless you have one already.
+ It’s not easy to get a ready made A
+ frican outwear for a fuction that fast. It’s also not easy to get a tailor or designer :womans_clothes: on a short notice unless you have one already.
 
 -------------------------------------
 
@@ -77,12 +78,13 @@
 * Css
 * Flask
 * Bootstrap
+* Javascript
 
 -------------------------------------------
 
 ## SUPPORT :telephone:
 
-* Email : fashoni@kenya.com :fax:
+* Email : fashoni@gmail.com :tel:0712345678
 
 ------------------------------------------
 
