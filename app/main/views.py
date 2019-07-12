@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..models import User,Subscription, Profile
+from ..models import User,Subscription
 from .. import db
 from .forms import SubscriptionForm,UpdateForm
 from ..email import mail_message
@@ -40,8 +40,18 @@ def update():
     return render_template('update.html',form=form)
 
 
-@main.route('/profile<int:id>', methods=['GET','POST'])
-@login_req
+@main.route('/user/<name>', methods=['GET','POST'])
+# @login_required
 def profile():
-    profile = profile.get_profile(id)
-    return render_template('profile.html',profile=profile)
+    form = UpdateForm()
+    if form.validate_on_submit():
+        current_user.username = form.name.data
+        current_user.about_me = form.bio.data
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('update'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.bio.data = current_user.bio
+   
+    return render_template('profile.html',title='Update profile',form=form)

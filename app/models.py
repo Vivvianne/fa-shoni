@@ -15,7 +15,19 @@ class User(UserMixin,db.Model):
     email = db.Column(db.String(255), unique=True, index=True)
     password_secure = db.Column(db.String(255))
     profile_picture = db.Column(db.String(255))
-    profile = db.relationship('Profile', backref = 'user', lazy ="dynamic")
+    contact = db.Column(db.String(255))
+    bio = db.Column(db.String(255))
+    adress = db.Column(db.String(255))
+    profile_picture = db.Column(db.String(255))
+    
+    @classmethod
+    def get_profile(cls, id):
+       quiz = Profile.query.filter_by(id=id).first()
+       return profile
+   
+    def save_profile(self):
+        db.session.add(self)
+        db.session.commit()
 
     @property
     def password(self):
@@ -31,7 +43,7 @@ class User(UserMixin,db.Model):
    
 
     def __repr__(self):
-        return f'User {self.name}'
+        return f'User {self.name,bio,adress,contact}'
 
 class Subscription(db.Model):
     __tablename__ = 'subscription'
@@ -45,27 +57,27 @@ class Subscription(db.Model):
     def __repr__(self):
         return f'Subscription {self.email}'
     
-class Profile(db.Model):
-    __tablename__ = 'profile'
-    id = db.Column(db.Integer,primary_key = True)
-    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
-    name = db.Column(db.String(255))
-    contact = db.Column(db.String(255))
-    bio = db.Column(db.String(255))
-    adress = db.Column(db.String(255))
-    profile_picture = db.Column(db.String(255))
+# class Profile(db.Model):
+#     __tablename__ = 'profile'
+#     id = db.Column(db.Integer,primary_key = True)
+#     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+#     name = db.Column(db.String(255))
+#     contact = db.Column(db.String(255))
+#     bio = db.Column(db.String(255))
+#     adress = db.Column(db.String(255))
+#     profile_picture = db.Column(db.String(255))
     
-    @classmethod
-    def get_profile(cls, id):
-       quiz = Profile.query.filter_by(id=id).first()
-       return profile
+#     @classmethod
+#     def get_profile(cls, id):
+#        quiz = Profile.query.filter_by(id=id).first()
+#        return profile
    
-    def save_profile(self):
-        db.session.add(self)
-        db.session.commit()
+#     def save_profile(self):
+#         db.session.add(self)
+#         db.session.commit()
     
-    def __repr__(self):
-        return f'Profile {self.name,bio,adress,contact}'
+#     def __repr__(self):
+#         return f'Profile {self.name,bio,adress,contact}'
     
 
     
