@@ -12,7 +12,7 @@ class SubscriptionForm(FlaskForm):
     
 class UpdateForm(FlaskForm):
    
-    name = StringField('Your name',validators=[DataRequired()])
+    name = StringField('Your name',validators=[Required()])
     location = StringField('Country/City',validators=[Required()])
     contact =StringField('Email/phone',validators=[Required()])
     bio = TextAreaField('Add a description',validators=[Length(min=0, max=140)])

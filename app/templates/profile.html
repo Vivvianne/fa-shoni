@@ -19,15 +19,15 @@
 
          <div>
             <ul>
-                <li>Name: {{user.name }}</li>
-                <li>Location: {{user.adress}}</li>
-                <li>Contact: {{user.contact }}</li>
-                <li>Bio: {{user.bio}} </li>
+                <li>Name: {{current_user.name }}</li>
+                <li>Location: {{current_user.adress}}</li>
+                <li>Contact: {{current_user.contact }}</li>
+                <li>Bio: {{current_user.bio}} </li>
             </ul>
          </div>
 
 
-         <a  href="{{url_for('main.update')}}" ><button type="button">Edit</button></a>
+        
 
      </div>
 
