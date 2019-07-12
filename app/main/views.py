@@ -2,8 +2,9 @@ from flask import render_template,request,redirect,url_for
 from . import main
 from ..models import User,Subscription
 from .. import db
-from .forms import SubscriptionForm
+from .forms import SubscriptionForm ,UpdateForm
 from ..email import mail_message
+from flask_login import login_user, logout_user, login_required
 
 
 
@@ -107,6 +108,27 @@ def search_designers(search):
         table = Profile(profile)
         table.border = True
         return render_template('designer.html', table=table)
+    
+
+@main.route('/user/<name>', methods=['GET','POST'])
+@login_required
+def profile(name):
+    form = UpdateForm()
+   
+    return render_template('profile.html',title='profile',form=form)
+
+@main.route('/user/<name>/update/pic',methods= ['POST'])
+@login_required
+def update_pic(name):
+    user = User.query.filter_by(username = name).first()
+    if 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        path = f'photos/{filename}'
+        user.profile_pic_path = path
+        db.session.commit()
+    return redirect(url_for('main.profile',name=name))
+
+
 
 
 

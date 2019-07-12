@@ -8,12 +8,25 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 class User(UserMixin,db.Model):
+    
     __tablename__ = 'users'
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
     email = db.Column(db.String(255), unique=True, index=True)
     password_secure = db.Column(db.String(255))
     profile_picture = db.Column(db.String(255))
+    contact = db.Column(db.String(255))
+    bio = db.Column(db.String(255))
+    adress = db.Column(db.String(255))
+    
+    @classmethod
+    def get_profile(cls, id):
+      quiz = Profile.query.filter_by(id=id).first()
+      return profile
+
+    def save_profile(self):
+       db.session.add(self)
+       db.session.commit()
 
     @property
     def password(self):
@@ -29,7 +42,7 @@ class User(UserMixin,db.Model):
    
 
     def __repr__(self):
-        return f'User {self.name}'
+        return f'User {self.name, bio, adress, contact}'
 
 class Subscription(db.Model):
     __tablename__ = 'subscription'

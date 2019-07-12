@@ -14,7 +14,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" style="text-align: right; font-size: 17px">
             {% if current_user.is_authenticated %}
-            <li style="color:white;">{{current_user.name}}</li>&nbsp;&nbsp;&nbsp;
+            <li style="color:white; font-family: 'Kaushan Script', cursive; font-size:1em;" >{{current_user.name}}</li>&nbsp;&nbsp;&nbsp;
+            <li><a class="navbar-brand"  style="font-family: 'Kaushan Script', cursive; font-size:1em; "href="{{url_for('main.profile',name = current_user.name)}}">profile</a></li>
             <li><a class="sign" href="{{url_for('auth.logout')}}" style="font-family: 'Kaushan Script', cursive; font-size:1em;">Sign out</a></li>
             {% else %}
             <li><a class="sign" href="{{url_for('auth.login')}}" style="font-family: 'Kaushan Script', cursive; font-size:1em;">sign in</a></li>
