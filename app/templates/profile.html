@@ -1,0 +1,30 @@
+{% extends 'base.html'%} 
+{% import 'bootstrap/wtf.html' as wtf%} 
+
+{% block content %}
+
+        <div class="container" style="text-align: center;">
+         <div class="d-flex justify-content-center h-100">
+             <div class="image_outer_container">
+                 
+                 <div class="image">
+                    <img class="img-responsive img-circle" src="../static/profile_pic/default.jpg" alt="Profile pic" class="img-thumbnail">
+                  </div>
+             </div>
+         </div>
+
+         <div card>
+            <div class="card-body" style= 'font-size: 30px;'>
+                    <li>Name: {{current_user.name }}</li>
+                    <li>Location: {{current_user.adress}}</li>
+                    <li>Contact: {{current_user.email }}</li>
+                    <li>Bio: {{current_user.bio}} </li>
+             </div>
+    
+         </div>
+
+        
+
+     </div>
+
+ {% endblock %} 

@@ -1,0 +1,233 @@
+body {
+    background-color: #eff0e0;
+    margin: 0;
+}
+h1{
+    color: black;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: white;
+}
+.flip-card-back {
+    background-color:rgb(185, 179, 179);
+    color: black;
+    transform: rotateY(180deg);
+ }
+ .flip-card-back h2{
+    font-size: 25px;
+}
+.flip-card-back p{
+    font-size: 15px;
+}
+a.sign {
+    color: #eff0e0;
+}
+#c-slide {
+    height: 100vh;
+    width: 100vw;
+    background-size: auto 100%;
+    background-position: center center;
+}
+#carousel-heading {
+    padding-bottom: 1%;
+    font-size: 60px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+}
+#carousel-text {
+    font-size: 35px;
+    padding-bottom: 3%;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 5px rgb(15, 56, 63);
+}
+#carousel-button {
+    border: none;
+    border: 4px solid rgb(52, 129, 29);
+    background: none;
+    color: rgb(4, 5, 5);
+    border-radius: 30px;
+    width: 250px;
+    cursor: pointer;
+}
+#button-spacing {
+    padding-bottom: 2%;
+}
+#carousel-button:hover {
+    border: none;
+    border: 4px solid gold;
+    background: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgb(15, 56, 63);
+    color: rgb(9, 11, 12);
+}
+#carousel-button a {
+    padding-left: 1%;
+    padding-right: 1%;
+    text-decoration: none;
+    color: rgb(25, 26, 22);
+    font-size: 30px;
+    font-weight: bolder;
+}
+#carousel-button a:hover {
+    padding-left: 1%;
+    padding-right: 1%;
+    text-decoration: none;
+    color: gold;
+    font-size: 30px;
+    background: none;
+    font-weight: bolder
+}
+.Section5 {
+    color: white;
+    background: rgb(15, 56, 63);
+}
+.Section5 h4 {
+    color: gold;
+    font-weight: bolder;
+}
+.Section h1 {
+    color: rgb(15, 56, 63);
+}
+.register {
+    text-align: center;
+    height: 840px;
+    color: white;
+}
+#social {
+    font-weight: bolder;
+}
+#social a {
+    color: white;
+    text-align: left;
+    font-weight: bolder;
+    line-height: 50px;
+}
+#social a:hover {
+    text-decoration: none;
+    color: gold;
+}
+.row {
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#reach-us {
+    font-weight: bolder;
+    color: white;
+}
+#reach-us p {
+    line-height: 30px;
+    text-align: left;
+}
+#page-links {
+    font-weight: bolder;
+}
+#page-links a {
+    color: white;
+    text-align: left;
+    font-weight: bolder;
+    line-height: 50px;
+}
+#page-links a:hover {
+    text-decoration: none;
+    color: gold;
+}
+#feedback-form {
+    flex-wrap: wrap;
+}
+#feedback-form input[type="email"] {
+    border: none;
+    background: transparent;
+    border: 3px solid white;
+    width: 80%;
+    bottom: 10px;
+    color: white;
+    border-radius: 10px;
+}
+#feedback-email {
+    padding-bottom: 2%;
+    margin-top: 25px;
+}
+#feedback-submit {
+    background-color: rgb(15, 56, 63);
+    border: none;
+    border: 3px solid white;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#feedback-submit:hover {
+    background-color: white;
+    color: rgb(15, 56, 63);
+}
+#feedback {
+    font-weight: bolder;
+    text-align: center;
+    left: 5%;
+}
+#feedback-button {
+    text-align: center;
+}
+#email::placeholder {
+    padding-left: 2%;
+}
+#line {
+    border: 2px solid whitesmoke;
+    width: 100%;
+    text-align: left;
+}
+/* About Us*/
+#about-us {
+    background-color: #eff0e0;
+    color: black;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  #about-us h1 {
+    padding-bottom: 1%;
+    font-size: 52px;
+    color: rgb(22, 20, 20);
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgb(216, 186, 186);
+  }
+  #about-us p {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(15, 15, 13);
+  }

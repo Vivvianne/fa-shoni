@@ -1,0 +1,9 @@
+Hello there,
+
+We feel bad to see you go. You are successfully unsubscribed from our email distribution. You will not receive emails from Fashoni anymore. 
+
+Of course, you are always welcome to join us again. You can do so by opening the link below in your browser:
+
+http://localhost:5000/subscribe/{{email}}
+
+Thanks!

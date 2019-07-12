@@ -1,0 +1,9 @@
+Hello,
+
+Welcome to fashoni. We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy the designs from different designers.
+
+If you want to unsubscribe, open the following link in your browser:
+
+http://localhost:5000/unsubscribe/{{email}}
+
+Thanks!

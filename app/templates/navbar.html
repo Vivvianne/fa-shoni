@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-family: 'Kaushan Script', cursive; font-size:2em;">Welcome to Fa-shoni</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/" style="font-family: 'Kaushan Script', cursive; font-size:1em;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li><a class="nav-link" href="{{url_for('main.designer')}}" style="font-family: 'Kaushan Script', cursive; font-size:1em;">Designers</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="text-align: right; font-size: 17px">
+            {% if current_user.is_authenticated %}
+            <li style="color:white; font-family: 'Kaushan Script', cursive; font-size:1em;" >{{current_user.name}}</li>&nbsp;&nbsp;&nbsp;
+            <li><a class="navbar-brand"  style="font-family: 'Kaushan Script', cursive; font-size:1em; "href="{{url_for('main.profile',name = current_user.name)}}">profile</a></li>
+            <li><a class="sign" href="{{url_for('auth.logout')}}" style="font-family: 'Kaushan Script', cursive; font-size:1em;">Sign out</a></li>
+            {% else %}
+            <li><a class="sign" href="{{url_for('auth.login')}}" style="font-family: 'Kaushan Script', cursive; font-size:1em;">sign in</a></li>
+            {%endif%}
+
+        </ul>
+    </div>
+</nav>
