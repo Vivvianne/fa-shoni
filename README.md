@@ -2,14 +2,14 @@
 
 --------------
 
-## :family: AUTHORS :family:
+## AUTHORS :family:
 
 
-* Vivian Kamau :woman:
-* Philip :boy:
-* Feven :woman:
-* Sharon Emma :woman:
-* Tony Kihara :boy:
+* Vivviann Kimani 
+* Philip kariuki 
+* Feven Moghes
+* Sharon Emma 
+* Tony Kihara
 
 ---------------------------
 
@@ -64,14 +64,13 @@
 
 ## KNOWN BUGS
 
-* Linking the routes using the wrong template name
-* Defining the functions in the wrong way
-* Forgetting to commit and upgrade the migrations
-* Forgetting to add endblocks in the templates after finishing to type
+* The subscription might not work with slow connection
+* No other know bugs
+
 
 ------------------------------------
 
-## TECHNOLOGIES USED :satellite:
+## TECHNOLOGIES USED
 
 * Python 
 * HTML
@@ -82,22 +81,21 @@
 
 -------------------------------------------
 
-## SUPPORT :telephone:
+## SUPPORT
 
-* Email : fashoni@gmail.com :tel:0712345678
+* Email : fashoni@gmail.com 
+* tel:0712345678
 
 ------------------------------------------
 
-## LIVESITE :telescope:
+## LIVESITE
 
  [Fa-shoni]()
 
 -------------------
 
-## LICENSE :cop:
+## LICENSE :
 
- Copyright @fashoni 2019
- All free for use to whoever is in use.Feel free to upgrade the functionality and the general outlook for a good user experience.
  [MIT license](https://github.com/Kihara-tony/license/blob/master/LICENSE)
 
 
